@@ -148,15 +148,8 @@ zle -N insert-selecta-path-in-command-line
 # Bind the key to the newly created widget
 bindkey "^S" "insert-selecta-path-in-command-line"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Initialize RVM
-#PATH=$PATH:$HOME/.rvm/bin
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-
-#source /usr/local/share/chruby/chruby.sh
-#source /usr/local/share/chruby/auto.sh
+# Docker alias
+alias docki='boot2docker start &>/dev/null && $(boot2docker shellinit 2>/dev/null) && echo "Docker IP: $(boot2docker ip)"'
+alias dockc='docker rm $(docker ps -aq)'
+alias dockp='docker ps'
+alias dockpa='docker ps -a'
