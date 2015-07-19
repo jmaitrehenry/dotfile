@@ -37,3 +37,5 @@
     ra = !git r --all
     l = "!. ~/.githelpers && pretty_git_log"
     la = !git l --all
+[push]
+    default = matching
